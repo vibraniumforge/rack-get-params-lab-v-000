@@ -16,7 +16,9 @@ class Application
     elsif req.path.match(/cart/)
       if @@cart.size==0
         resp.write "Your cart is empty"
-      resp.write "#{@@cart}"
+      elsif
+        resp.write "#{@@cart}"
+      end
     elsif req.path.match(/add/)
       if @@items.indlude?("item")
 
