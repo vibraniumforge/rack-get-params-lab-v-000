@@ -22,7 +22,7 @@ class Application
         end
       end
     elsif req.path.match(/add/)
-      if @@items.indlude?("item")
+      if @@items.include?("item")
         @@cart << @@items[item]
       else
         resp.write "We don't have that item"
