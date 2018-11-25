@@ -23,7 +23,7 @@ class Application
       if @@items.indlude?("item")
         @@cart << @@items[item]
       else
-        resp.write "Error"
+        resp.write "We don't have that item"
       end
     else
       resp.write "Path Not Found"
