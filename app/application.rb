@@ -13,9 +13,9 @@ class Application
     elsif req.path.match(/search/)
       search_term = req.params["q"]
       resp.write handle_search(search_term)
-    elsif req.path.match(/cart)
+    elsif req.path.match(/cart/)
       resp.write "#{@@cart}"
-    elsif req.path.match(/add)
+    elsif req.path.match(/add/)
       if @@items.indlude?("item")
 
       else
