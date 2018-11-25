@@ -16,7 +16,11 @@ class Application
     elsif req.path.match(/cart)
       resp.write "#{@@cart}"
     elsif req.path.match(/add)
+      if @@items.indlude?("item")
 
+      else
+        resp.write "Error"
+      end
     else
       resp.write "Path Not Found"
     end
