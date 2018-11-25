@@ -17,7 +17,8 @@ class Application
       if @@cart.size==0
         resp.write "Your cart is empty"
       elsif
-        resp.write "#{@@cart}"
+        @@cart.each do |item|
+          resp.write "#{item}\n"
       end
     elsif req.path.match(/add/)
       if @@items.indlude?("item")
