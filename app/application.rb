@@ -21,7 +21,7 @@ class Application
       end
     elsif req.path.match(/add/)
       if @@items.indlude?("item")
-
+        @@cart << @@items[item]
       else
         resp.write "Error"
       end
