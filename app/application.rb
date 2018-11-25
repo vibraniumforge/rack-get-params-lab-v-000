@@ -19,6 +19,7 @@ class Application
       elsif
         @@cart.each do |item|
           resp.write "#{item}\n"
+        end
       end
     elsif req.path.match(/add/)
       if @@items.indlude?("item")
